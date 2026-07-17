@@ -45,7 +45,7 @@ const SHADOW_CSS = `
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: radial-gradient(circle at 50% 50%, #170e30 0%, #07040d 100%);
+    background: radial-gradient(circle at 50% 50%, #15151a 0%, #050507 100%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -56,8 +56,8 @@ const SHADOW_CSS = `
   }
 
   .blocker-card {
-    background: rgba(19, 13, 36, 0.7);
-    border: 1px solid rgba(168, 85, 247, 0.2);
+    background: rgba(18, 18, 22, 0.75);
+    border: 1px solid rgba(245, 158, 11, 0.18);
     border-radius: 24px;
     padding: 40px;
     width: 90%;
@@ -86,7 +86,7 @@ const SHADOW_CSS = `
   .logo-icon {
     width: 32px;
     height: 32px;
-    filter: drop-shadow(0 0 8px rgba(168, 85, 247, 0.6));
+    filter: drop-shadow(0 0 8px rgba(245, 158, 11, 0.4));
   }
 
   .logo-text {
@@ -97,7 +97,7 @@ const SHADOW_CSS = `
   }
 
   .logo-accent {
-    background: linear-gradient(135deg, #a855f7, #06b6d4);
+    background: linear-gradient(135deg, #f59e0b, #0d9488);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -116,13 +116,13 @@ const SHADOW_CSS = `
   }
 
   .goal-pill {
-    background: rgba(168, 85, 247, 0.1);
-    border: 1px solid rgba(168, 85, 247, 0.2);
+    background: rgba(245, 158, 11, 0.08);
+    border: 1px solid rgba(245, 158, 11, 0.18);
     padding: 8px 16px;
     border-radius: 12px;
     font-size: 13px;
     font-weight: 500;
-    color: #d8b4fe;
+    color: #fcd34d;
     max-width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -145,7 +145,7 @@ const SHADOW_CSS = `
     width: 110px;
     height: 110px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(168, 85, 247, 0.2) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(245, 158, 11, 0.15) 0%, transparent 70%);
     animation: breatheOuter 12s infinite ease-in-out;
   }
 
@@ -154,8 +154,8 @@ const SHADOW_CSS = `
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    background: linear-gradient(135deg, rgba(168, 85, 247, 0.6), rgba(6, 182, 212, 0.6));
-    box-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.65), rgba(13, 148, 136, 0.65));
+    box-shadow: 0 0 20px rgba(245, 158, 11, 0.25);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -172,9 +172,9 @@ const SHADOW_CSS = `
   }
 
   @keyframes breatheInner {
-    0%, 100%, 16.66%, 83.33% { transform: scale(1); background: rgba(168, 85, 247, 0.6); }
-    33.33%, 50% { transform: scale(1.35); background: rgba(6, 182, 212, 0.6); box-shadow: 0 0 30px rgba(6, 182, 212, 0.5); }
-    66.66%, 75% { transform: scale(1); background: rgba(168, 85, 247, 0.6); }
+    0%, 100%, 16.66%, 83.33% { transform: scale(1); background: rgba(245, 158, 11, 0.65); }
+    33.33%, 50% { transform: scale(1.35); background: rgba(13, 148, 136, 0.65); box-shadow: 0 0 30px rgba(13, 148, 136, 0.35); }
+    66.66%, 75% { transform: scale(1); background: rgba(245, 158, 11, 0.65); }
   }
 
   @keyframes breatheOuter {
@@ -218,14 +218,14 @@ const SHADOW_CSS = `
   }
 
   .btn-primary {
-    background: linear-gradient(135deg, #a855f7, #ec4899);
+    background: linear-gradient(135deg, #f59e0b, #f97316);
     color: #fff;
-    box-shadow: 0 4px 15px rgba(168, 85, 247, 0.3);
+    box-shadow: 0 4px 15px rgba(245, 158, 11, 0.2);
   }
 
   .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(168, 85, 247, 0.4);
+    box-shadow: 0 8px 20px rgba(245, 158, 11, 0.25);
   }
 
   .btn-secondary {
@@ -258,8 +258,8 @@ const SHADOW_CSS = `
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background: rgba(9, 5, 20, 0.85);
-    border: 1px solid rgba(6, 182, 212, 0.25);
+    background: rgba(10, 10, 12, 0.85);
+    border: 1px solid rgba(13, 148, 136, 0.25);
     border-radius: 9999px;
     padding: 6px 14px 6px 8px;
     backdrop-filter: blur(12px);
@@ -277,8 +277,8 @@ const SHADOW_CSS = `
   }
 
   .traction-widget:hover {
-    border-color: rgba(6, 182, 212, 0.5);
-    box-shadow: 0 10px 30px rgba(6, 182, 212, 0.15);
+    border-color: rgba(13, 148, 136, 0.5);
+    box-shadow: 0 10px 30px rgba(13, 148, 136, 0.1);
   }
 
   .traction-widget:active {
@@ -303,13 +303,13 @@ const SHADOW_CSS = `
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background: #a855f7;
-    box-shadow: 0 0 8px #a855f7;
+    background: #f59e0b;
+    box-shadow: 0 0 8px #f59e0b;
   }
 
   .widget-indicator.break {
-    background: #06b6d4;
-    box-shadow: 0 0 8px #06b6d4;
+    background: #0d9488;
+    box-shadow: 0 0 8px #0d9488;
   }
 
   .widget-time {
@@ -429,9 +429,9 @@ function drawBlocker(state) {
   // Use SVG path representing the needle logo icon
   logoDiv.innerHTML = `
     <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="32" height="32">
-      <circle cx="64" cy="64" r="42" fill="none" stroke="#2e1065" stroke-width="6" />
-      <path d="M 34.3 93.7 A 42 42 0 1 1 93.7 93.7" fill="none" stroke="#a855f7" stroke-width="6" stroke-linecap="round" />
-      <path d="M 64 64 L 58 58 L 64 28 L 70 58 Z" fill="#06b6d4" transform="rotate(35, 64, 64)" />
+      <circle cx="64" cy="64" r="42" fill="none" stroke="#27272a" stroke-width="6" />
+      <path d="M 34.3 93.7 A 42 42 0 1 1 93.7 93.7" fill="none" stroke="#f59e0b" stroke-width="6" stroke-linecap="round" />
+      <path d="M 64 64 L 58 58 L 64 28 L 70 58 Z" fill="#f97316" transform="rotate(35, 64, 64)" />
     </svg>
     <span class="logo-text">Traction <span class="logo-accent">Control</span></span>
   `;

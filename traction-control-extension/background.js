@@ -121,7 +121,7 @@ function updateBadge() {
     if (minutesLeft > 0) {
       chrome.action.setBadgeText({ text: `${minutesLeft}m` });
       chrome.action.setBadgeBackgroundColor({
-        color: state.mode === 'focus' ? '#a855f7' : '#06b6d4' // Violet for focus, Cyan for break
+        color: state.mode === 'focus' ? '#f59e0b' : '#0d9488' // Amber for focus, Teal for break
       });
     } else {
       chrome.action.setBadgeText({ text: '0m' });

@@ -1,11 +1,11 @@
 /* Global Reset and Constants */
 :root {
-  --bg-dark: #090514;
-  --bg-card: rgba(19, 13, 36, 0.65);
-  --border-glow: rgba(168, 85, 247, 0.25);
-  --purple-glow: #a855f7;
-  --cyan-glow: #06b6d4;
-  --pink-accent: #ec4899;
+  --bg-dark: #050507;
+  --bg-card: rgba(18, 18, 22, 0.75);
+  --border-glow: rgba(245, 158, 11, 0.2);
+  --purple-glow: #f59e0b;       /* Focus Amber */
+  --cyan-glow: #0d9488;         /* Break Teal */
+  --pink-accent: #f97316;       /* Accent Orange */
   --text-primary: #f8fafc;
   --text-secondary: #94a3b8;
   --text-muted: #64748b;
@@ -27,8 +27,8 @@ body {
   overflow: hidden;
   position: relative;
   background-image: 
-    radial-gradient(circle at 0% 0%, rgba(168, 85, 247, 0.15) 0%, transparent 40%),
-    radial-gradient(circle at 100% 100%, rgba(6, 182, 212, 0.15) 0%, transparent 45%);
+    radial-gradient(circle at 0% 0%, rgba(245, 158, 11, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 100% 100%, rgba(13, 148, 136, 0.08) 0%, transparent 45%);
 }
 
 /* App Container */
@@ -38,7 +38,7 @@ body {
   display: flex;
   flex-direction: column;
   padding: 16px;
-  background: rgba(9, 5, 20, 0.4);
+  background: rgba(5, 5, 7, 0.5);
 }
 
 /* Header */
@@ -59,7 +59,7 @@ body {
 .app-logo {
   width: 26px;
   height: 26px;
-  filter: drop-shadow(0 0 6px rgba(168, 85, 247, 0.5));
+  filter: drop-shadow(0 0 6px rgba(245, 158, 11, 0.4));
   transition: var(--transition-smooth);
 }
 
@@ -69,8 +69,8 @@ body {
 }
 
 @keyframes logoPulse {
-  0%, 100% { transform: scale(1); filter: drop-shadow(0 0 6px rgba(168, 85, 247, 0.5)); }
-  50% { transform: scale(1.1); filter: drop-shadow(0 0 12px rgba(6, 182, 212, 0.7)); }
+  0%, 100% { transform: scale(1); filter: drop-shadow(0 0 6px rgba(245, 158, 11, 0.4)); }
+  50% { transform: scale(1.1); filter: drop-shadow(0 0 12px rgba(13, 148, 136, 0.5)); }
 }
 
 .logo-text {
@@ -95,18 +95,18 @@ body {
   letter-spacing: 1px;
   padding: 4px 10px;
   border-radius: 9999px;
-  background: rgba(168, 85, 247, 0.12);
+  background: rgba(245, 158, 11, 0.1);
   color: var(--purple-glow);
-  border: 1px solid rgba(168, 85, 247, 0.2);
-  box-shadow: 0 0 10px rgba(168, 85, 247, 0.05);
+  border: 1px solid rgba(245, 158, 11, 0.18);
+  box-shadow: 0 0 10px rgba(245, 158, 11, 0.03);
   transition: var(--transition-smooth);
 }
 
 .status-pill.break {
-  background: rgba(6, 182, 212, 0.12);
+  background: rgba(13, 148, 136, 0.1);
   color: var(--cyan-glow);
-  border: 1px solid rgba(6, 182, 212, 0.2);
-  box-shadow: 0 0 10px rgba(6, 182, 212, 0.05);
+  border: 1px solid rgba(13, 148, 136, 0.18);
+  box-shadow: 0 0 10px rgba(13, 148, 136, 0.03);
 }
 
 .status-pill.idle {
@@ -161,7 +161,7 @@ body {
 
 .tab-btn.active svg {
   color: var(--purple-glow);
-  filter: drop-shadow(0 0 4px rgba(168, 85, 247, 0.5));
+  filter: drop-shadow(0 0 4px rgba(245, 158, 11, 0.4));
 }
 
 /* Main Content Area */
@@ -265,7 +265,7 @@ body {
 
 .task-box:focus-within {
   border-color: var(--border-glow);
-  box-shadow: 0 8px 24px rgba(168, 85, 247, 0.08);
+  box-shadow: 0 8px 24px rgba(245, 158, 11, 0.06);
 }
 
 .task-label {
@@ -313,8 +313,8 @@ body {
 }
 
 .goal-lock-btn:hover {
-  background: rgba(168, 85, 247, 0.15);
-  border-color: rgba(168, 85, 247, 0.3);
+  background: rgba(245, 158, 11, 0.15);
+  border-color: rgba(245, 158, 11, 0.3);
   color: var(--purple-glow);
 }
 
@@ -322,7 +322,7 @@ body {
   background: var(--purple-glow);
   border-color: var(--purple-glow);
   color: #fff;
-  box-shadow: 0 0 10px rgba(168, 85, 247, 0.4);
+  box-shadow: 0 0 10px rgba(245, 158, 11, 0.3);
 }
 
 /* Control Buttons */
@@ -346,14 +346,14 @@ body {
   width: 56px;
   height: 56px;
   border-radius: 9999px;
-  background: linear-gradient(135deg, var(--purple-glow), #d946ef);
+  background: linear-gradient(135deg, var(--purple-glow), var(--pink-accent));
   color: #fff;
-  box-shadow: 0 8px 20px rgba(168, 85, 247, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 20px rgba(245, 158, 11, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
 .control-btn.primary:hover {
   transform: translateY(-2px) scale(1.03);
-  box-shadow: 0 12px 24px rgba(168, 85, 247, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  box-shadow: 0 12px 24px rgba(245, 158, 11, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
 .control-btn.primary:active {
@@ -437,8 +437,8 @@ body {
 }
 
 .adjust-btn:hover {
-  background: rgba(168, 85, 247, 0.15);
-  border-color: rgba(168, 85, 247, 0.3);
+  background: rgba(245, 158, 11, 0.15);
+  border-color: rgba(245, 158, 11, 0.3);
   color: var(--purple-glow);
 }
 
@@ -533,7 +533,7 @@ body {
 
 input:checked + .slider {
   background-color: var(--purple-glow);
-  box-shadow: 0 0 8px rgba(168, 85, 247, 0.4);
+  box-shadow: 0 0 8px rgba(245, 158, 11, 0.35);
 }
 
 input:checked + .slider:before {
@@ -582,8 +582,8 @@ input:checked + .slider:before {
 }
 
 .add-site-btn {
-  background: rgba(168, 85, 247, 0.15);
-  border: 1px solid rgba(168, 85, 247, 0.25);
+  background: rgba(245, 158, 11, 0.15);
+  border: 1px solid rgba(245, 158, 11, 0.25);
   color: var(--purple-glow);
   width: 32px;
   height: 32px;
@@ -598,7 +598,7 @@ input:checked + .slider:before {
 .add-site-btn:hover {
   background: var(--purple-glow);
   color: white;
-  box-shadow: 0 0 10px rgba(168, 85, 247, 0.3);
+  box-shadow: 0 0 10px rgba(245, 158, 11, 0.25);
 }
 
 .sites-list {
