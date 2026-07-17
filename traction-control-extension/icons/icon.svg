@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="50%" fx="30%" fy="30%">
+      <stop offset="0%" stop-color="#1e1b4b" />
+      <stop offset="100%" stop-color="#090514" />
+    </radialGradient>
+    
+    <!-- Neon Glow Gradient -->
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a855f7" />
+      <stop offset="50%" stop-color="#ec4899" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+
+    <!-- Neon Cyan Shadow/Glow -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background Circle with smooth borders -->
+  <rect width="128" height="128" rx="32" fill="url(#bgGrad)" stroke="#2e1065" stroke-width="2" />
+  
+  <!-- Outer gauge ring -->
+  <circle cx="64" cy="64" r="42" fill="none" stroke="#1e1b4b" stroke-width="6" />
+  
+  <!-- Glowing active traction arc -->
+  <path d="M 34.3 93.7 A 42 42 0 1 1 93.7 93.7" fill="none" stroke="url(#glowGrad)" stroke-width="6" stroke-linecap="round" filter="url(#glow)" />
+  
+  <!-- Glowing speed gauge needle / arrow -->
+  <g transform="translate(64,64)" filter="url(#glow)">
+    <!-- Rotating needle to indicate traction -->
+    <path d="M 0 0 L -6 -6 L 0 -36 L 6 -6 Z" fill="#06b6d4" transform="rotate(35)" />
+    <circle cx="0" cy="0" r="10" fill="#090514" stroke="#06b6d4" stroke-width="4" />
+    <circle cx="0" cy="0" r="3" fill="#06b6d4" />
+  </g>
+</svg>
